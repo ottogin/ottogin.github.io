@@ -21,6 +21,9 @@
   <!-- Custom styles for this template -->
   <link href="css/grayscale.min.css" rel="stylesheet">
 
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+
 </head>
 
 <body id="page-top">
@@ -71,67 +74,194 @@
             As a model task we will use our insights to predict how many yards will an NFL player gain after receiving a handoff.
          </p>
 
-          <p class="text-white-50"><br><span class="focus"> Do successful open source projects have common patterns? </span> <br> <br> Through this project, we hope to <span class="focus"> gain some insights </span> into what contributes to the success of an open source project. This might allow us to <span class="focus"> identify common patterns among successful projects </span>, and formulate some guidelines that <span class="focus"> might be beneficial </span> to other projects' success.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects-section bg-light">
+  <section id="projects" class="projects-section bg-white">
     <div class="container">
 
       <!-- Sheldon section -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-      <iframe width=560 height=315 src="https://www.youtube.com/embed/XfYI8ILGuv0?start=28" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-center">
+            <h1> Was Sheldon Cooper right?</h1>
+            <p class="text-black-50 mb-0"> 
+              Sheldon Cooper is a young genius from the cult serial "Big Bang Theory". 
+              In one of the episodes about his youth Sheldon analyzes statistic of 
+              American Football games and proposes a tactic which then helps his father win a game.
+            </p>
+            <p align="center" style="margin-top:1cm;">
+              <iframe width=560 height=315 src="https://www.youtube.com/embed/XfYI8ILGuv0?start=28" frameborder="0" 
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+          </div>
+      </div>
+
+
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <h4> Sheldon says: </h4>      
+          <p class="text-black-50 mb-0">
+            <span class="clhl">
+              – Statistically always punching on fourth down makes no sense. When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring when they put deep from their own territory the other team still has a 77% chance of scoring but since they convert on fourth down 50% of the time the math says they should never punch again
+                                          We can decompose it into the following statements:
+                                          When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring
+                                          When they put deep from their own territory the other team still has a 77% chance of scoring
+                                          They convert on fourth down 50% of the time
+                                          Math says they should never punch again
+            </span>
+            
+            <p style="margin-top:1cm;"></p>
+            <h4> We can decompose it into the following statements: </h4>  
+            <ul>
+              <li>When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring</li>
+              <li>When they put deep from their own territory the other team still has a 77% chance of scoring</li>
+              <li>They convert on fourth down 50% of the time</li>
+              <li>Math says they should never punch again</li>
+            </ul>
+
+            <p style="margin-top:1cm;">
+              <h4> 
+                Honestly speaking we know that Sheldon was right, and there are a lot of statistics proving that.
+                For example take a look into 
+                <a href="https://www.reddit.com/r/CFB/comments/2w46r0/why_do_teams_still_punt_statistically_it_almost/">this post</a>.
+              </h4>   
+              As in our dataset we have an information only about hadoffs and nothing about punching we couldn't check exactly these facts, 
+              but that stetements inspired us with some interesting things to check.
+            </p>
+          </p>
+        </div>
+      </div>
+
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/DistanceToTouchdown.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5 order-lg-first">
           <div class="featured-text text-center text-lg-left">
-            <h4> Was Sheldon Cooper right?</h4>
+            <h2>Statements 1 and 2</h2>
             <p class="text-black-50 mb-0">
-                                          Sheldon says :
-                                          – Statistically always punching on fourth down makes no sense. When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring when they put deep from their own territory the other team still has a 77% chance of scoring but since they convert on fourth down 50% of the time the math says they should never punch again
-                                          We can decompose it into the following statements:
-                                          When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring
-                                          When they put deep from their own territory the other team still has a 77% chance of scoring
-                                          They convert on fourth down 50% of the time
-                                          Math says they should never punch again</p>
+              Sheldon says that the probability to score when there are less then five yards left is 92%. 
+              In American Football there are 4 ways of scoring, but unfortunately from our data we can derive only the information about 
+              TouchDowns. Hovever it is the most popular and valuable way of score gaining, so that is also very interesting. 
+              So, let's check it out! For that we need to check if rusher crosses the end-zone. 
+              To do that we at first analyze how many yards from the line of scrimmage to the defence's end-zone at each down.
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Sheldon section -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-        <iframe src="img/p1.html" height=700 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="featured-text text-center text-lg-center">
+          <p class="text-black-50 mb-0"> 
+          Very wierd outlier on the 75 yards? 
+          The answer is <a href=https://en.wikipedia.org/wiki/Touchback>touchbacks</a>  - 
+          a ruling when the ball becomes dead on or behind a team's own goal being send by opposing team.
+          Since 2018 NFL 
+          <a href=https://www.sbnation.com/nfl/2016/3/22/11269056/nfl-touchbacks-rule-change-fails-25-20-yard-line> 
+            awards toucbacks by 25 yards kickoffs </a>.
+          But let's get back to touchdowns!
+          </p>
+        </div>
+      </div>
+
+      <div class="featured-text text-center text-lg-center">
+        <h1>Team does a touchdown with <span class="Count">2.8570</span>% chance</h1>
+     
+      </div>
+
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/TochdownProba.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4> Was Sheldon Cooper right?</h4>
-            <p class="text-black-50 mb-0">Sheldon says:
-                                          – Statistically always punching on fourth down makes no sense. When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring when they put deep from their own territory the other team still has a 77% chance of scoring but since they convert on fourth down 50% of the time the math says they should never punch again
-                                          We can decompose it into the following statements:
-                                          When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring
-                                          When they put deep from their own territory the other team still has a 77% chance of scoring
-                                          They convert on fourth down 50% of the time
-                                          Math says they should never punch again</p>
+            <h4>How likely you will do a touchdown?</h4>
+            <p class="text-black-50 mb-0">
+              Knowing achived yards on a down we can draw a conclusion if there was a touchdown or not.
+              On this plot you can see how likely a team scores with touchdown depending on a position of the line of scrimmage. 
+              We can see that <span class="clhl"> the probability to score with a touchdown from 5-yard line is only 18.18%. </span>
+              But Sheldon doesn't lie, so may be he meant the probability to score having number of yards ≤ 5?
+            </p>
           </div>
         </div>
       </div>
 
-      <!-- Sheldon section -->
-      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-        <iframe src="img/p2.html" height=700 width=700 frameborder="0" scrolling="no"> </iframe>
-        <div class="col-xl-4 col-lg-5">
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/TochdownCumProba.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5 order-lg-first">
           <div class="featured-text text-center text-lg-left">
-            <h4> Was Sheldon Cooper right?</h4>
-            <p class="text-black-50 mb-0">Sheldon says:
-                                          – Statistically always punching on fourth down makes no sense. When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring when they put deep from their own territory the other team still has a 77% chance of scoring but since they convert on fourth down 50% of the time the math says they should never punch again
-                                          We can decompose it into the following statements:
-                                          When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring
-                                          When they put deep from their own territory the other team still has a 77% chance of scoring
-                                          They convert on fourth down 50% of the time
-                                          Math says they should never punch again</p>
+            <h4>What if we start closer?</h4>
+            <p class="text-black-50 mb-0">
+              On this plot we have a probability to score starting from X yards or closer.
+              <span class="clhl"> One can do a touchdown from ≤ 5-yard line with a 40% chance. </span>
+              It is still much less than promised 92%. 
+              But, we still do not have an infromation about punches and throws, 
+              we can not conlude that Sheldon was right or wrong here. 
+              However this is a nice statistics, which may be useful for coaches.
+            </p>
           </div>
         </div>
       </div>
+
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="featured-text text-center text-lg-center">
+        <h2> Statement 3</h2>
+        <p class="text-black-50 mb-0"> 
+          Here we want to investigate how probable it is to gain next 4 downs by making 10 yards in 4 downs.
+          For that we will compare number of made yards with the distance needed for achieving the goal. 
+        </p>
+    
+        <h3>On each down a team has <span class="Count">21.1471</span>% chance to get next 4 downs</h3>
+      </div>
+    </div>
+
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <iframe src="img/charts/GoalProba.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>When we make 10-yards?</h4>
+            <p class="text-black-50 mb-0">
+              If team does not move line of scrimmage 10 yards forward in 4 downs, ball obsession goes to a defending team.
+              So, how likely team will achieve 10 yards and prevent trun-over?
+              From the plot we see probability grows almost linearly and this is what we expect to see 
+              as the team moves gradually during the 4 downs. 
+              However there is slight decreas on the 4th down, what may mean that the deffensive team plays more aggressive on 4th down.
+              So, <span class="clhl"> the probability to convert on fourth down is 42% percent </span>. 
+              That is very close to Sheldon's prediction, and as we also didn't 
+              consider the probability of the ball interception it may be even closer to 50%!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/DownTouchdownProba.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5 order-lg-first">
+          <div class="featured-text text-center text-lg-left">
+            <h4>What down is the best for scoring?</h4>
+            <p class="text-black-50 mb-0">
+              The probability to make a touchdown on the fourth down is almost 3 times higher than on the first one. 
+              While on average each down with sucsessfull handoff gives only 4 yards it should not affect 
+              the probability of touchdown on the huge distances. We explain this phenomenon by the fact that 
+              we plot <span class="clhl">P(Touchdown|4th down, rush)</span> and a coach makes a decision to rush on a 4th down 
+              only when he is sure that the team will score. If you will see a game, usually team punch the ball 
+              on the 4th down, so the real probability 
+            </p><p class="text-black-50 mb-0">
+              <span class="clhl">P(Touchdown| 4th down)</span> is much smaller.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="featured-text text-center text-lg-center">
+        <h2> Conslusion for Sheldon? </h2>
+
+        <h3> In average after handoff a team does <span class="Count"> 4.2123 </span> yards </p>
+        <h3> Having these results we would advise coaches to rush when the distance for gaining additional d
+              owns is less than 2.5 yards. </h3>  
+      </div>
+    </div>
+
   </section>
 
   <!-- About Section -->
@@ -172,6 +302,19 @@
 
 <!-- Custom scripts for this template -->
 <script src="js/grayscale.min.js"></script>
+
+<script>
+  $('.Count').each(function () {
+    var $this = $(this);
+    jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+      duration: 6000,
+      easing: 'swing',
+      step: function () {
+        $this.text(this.Counter.toFixed(4));
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
