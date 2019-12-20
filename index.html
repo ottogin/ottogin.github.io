@@ -22,7 +22,7 @@
   <link href="css/grayscale.min.css" rel="stylesheet">
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-
+  <script type="text/javascript" src="js/numscroller-1.0.js"></script>
 
 </head>
 
@@ -37,7 +37,16 @@
             <a class="nav-link js-scroll-trigger" href="#about">Abstract</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Results</a>
+            <a class="nav-link js-scroll-trigger" href="#intro">Intro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#datasence">First insights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#Sheldon">Sheldon</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#tactics">Tactics</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#signup">Conclusion</a>
@@ -70,8 +79,7 @@
             Deeper insight about what is important and what is not will help teams, media, and fans better understand the game, and for coaches to find better strategies.
 
             As good data scientists we are going to start discovering the data with nice visualizations. 
-            Looking at players positions, understanding coach strategies and team statistics will hopefully give us surprising ideas. 
-            As a model task we will use our insights to predict how many yards will an NFL player gain after receiving a handoff.
+            Looking at players positions, understanding coach strategies and team statistics will hopefully give us surprising ideas.
          </p>
 
         </div>
@@ -79,11 +87,165 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section bg-white">
+  <!-- Intro Section -->
+  <section id="intro" class="projects-section bg-white">
     <div class="container">
 
-      <!-- Sheldon section -->
+      <!-- Rules -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="featured-text text-center text-lg-center">
+            <h1> Complex rules of the complex game</h1>
+            <p class="text-black-50 mb-0"> 
+              American football is one of the most interesting and complex sports in the world. 
+              It is a sport game played by two teams of 11 players on a 120-yard rectangular field with goal lines on each end. 
+              The objective of the game is for one team to outscore the other. 
+              The offense, or the team with control of the ball, 
+              attempts to advance the ball down the field by running or passing the ball, 
+              while the opposing team aims to stop their advance and tries to take control of the ball. 
+              The offense must advance at least 10 yards in four downs, or plays, 
+              or else they turn over the football to the opposing team; if they succeed, 
+              they are given a new set of four downs. The place where the ball goes down becomes the line of scrimmage, 
+              and it is where the ball is placed for the start of the next play. Scoring can occur in the form of a touchdown (6 points),
+              an extra point conversion (1 point), a two-point conversion (2 points), a field goal (3 points) or a safety (2 points). 
+            </p>
+            <p></p>
+            <p> 
+              For better and more detailed explanations of the rules we advise you to read 
+              <a href="https://www.liveabout.com/football-101-the-basics-of-football-1333784">this article </a>.
+              and watch <a href="https://www.youtube.com/watch?v=Ddwp1HyEFRE"> this video </a>.
+              If you are already into the game, you can find full games on 
+              <a href="https://www.youtube.com/channel/UCP4Wts8iiR9-Ddfq7FK0x3g/videos"> this channel </a>.
+
+            </p> 
+            <a href="https://www.nfl.com">
+              <img src="img/NFL_logo.png" alt="Italian Trulli" style="width:300px;">
+            </a>
+          </div>
+      </div>
+
+      <!-- Data Description -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-lg">
+          <div class="featured-text text-center text-lg-left">
+            <h2>Data description</h2>
+            <p class="text-black-50 mb-0">
+              Being one of the most intricate sports in the world makes american football also 
+              one of the most interesting to explore. This sport game is made up of several key moments one 
+              of which is hand-off - the act of handing the ball directly from one player to another, 
+              i.e. without it leaving the first player's hands. To explore this interesting aspect of the game and, 
+              in general, the game itself, we used NFL dataset from kaggle competition "NFL Big Data Bowl". 
+              The dataset contains numerous statistics about the game (e.g. location) as well as players 
+              (e.g. position, speed, direction) all recorded at the time of hand-off.
+            </p>
+          </div>
+        </div>
+      <div class="col-sm">
+          <a href="https://www.kaggle.com">
+            <img src="img/Kaggle_logo.png" alt="Italian Trulli" style="max-width: 300px; width: 100%; height: auto; display: block; margin:20px auto;">
+          </a>
+          <a href="https://www.kaggle.com/c/nfl-big-data-bowl-2020">
+            <img src="img/BigDataBowl.png" alt="Italian Trulli" style="max-width: 150px; width: 100%; height: auto; display: block; margin:20px auto;">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr style="border: 5px solid black;"> 
+
+  <!-- Data Sence Section -->
+  <section id="datasence" class="projects-section bg-white">
+    <div class="container">
+    
+      <!-- First insights -->
+      <div class="featured-text text-center text-lg-center">
+        <h1> First insights </h1>
+        <p class="text-black-50 mb-0">
+          The National Football League has the highest average attendance of any sporting league in 
+          the world with an impressive average attendance of 66,960 during the 2011 NFL season, by the way, 
+          it's almost half of Lausanne’s population. Best players are already assigned the same level of 
+          fame and respect as national heroes. 
+          Not only hero status but also an exciting life full of competitive spirit is what we recall when
+           we think about football players. These make a number of children to dream about a career as a 
+           player of this fascinating game. To make this dream come true, they start training in high schools and colleges.
+        </p>
+      </div>
+   
+      <!-- Map -->
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/maps.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5 order-lg-first">
+          <div class="featured-text text-center text-lg-left">
+            <h2>Where?</h2>
+            <p class="text-black-50 mb-0">
+              Let’s plot the number of games played in the state on the US map. 
+              Let’s also plot the popularity of each state for professional players studying. 
+              As you can see, there are huge differences in these maps. 
+              The most games are played in California, while most players studied in Texas. 
+              There are no games in the middle of the US, but some players studied there.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-text text-center text-lg-center">
+        <p class="text-black-50 mb-0">
+           From the previous plots, we learned that the distributions of games and players’ colleges differ significantly. 
+           It means that players often move to another state to join the professional team. 
+        </p>
+      </div>
+
+      <!-- Transitions -->
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/transitions.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h2>Where is everyone going?</h2>
+            <p class="text-black-50 mb-0">
+             
+              Let’s plot the most popular directions for a future career from each state (you can select an analyzed state). 
+              It’s interesting that some state has a very strong preference in such direction (for example, 
+              students from Texas prefer to play in California while students from Alabama usually moves to New York) 
+              but players who studied in other states (for example, in California) moves almost evenly to other states. 
+              We suppose that it is related to a difference in the work of scout teams in different states.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weights -->
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/players_weights_box_plot.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5 order-lg-first">
+          <div class="featured-text text-center text-lg-left">
+            <h2>Who is who?</h2>
+            <p class="text-black-50 mb-0">
+              Looking at players' weight distribution depending on the positions they play, 
+              one can observe three 3 different groups. The first group ('heavy-weight' marked with red colour) 
+              includes player positions such as OT (offensive tackle) or G (guard) whose primary goal is both 
+              stop the run and put pressure on the quarterback. This explains why players in this group have median 
+              weight of more than 140kg. Wow!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-text text-center text-lg-center">
+        <p class="text-black-50 mb-0">
+          In the group marked with blue colour ('light-weight'),there are positions 
+              like WR (wide receiver), which is again very natural, since such players must be agile to be able to catch
+              the ball and run fast. The group in the middle ('medium-weight' marked with green colour) consists of mainly 
+              linebreakers, i.e. players whose primary role is to give instructions to other teammates and back up the line.
+        </p>
+      </div>
+      
+    </div>
+  </section>
+
+  <hr style="border: 5px solid black;"> 
+  <!-- Sheldon section -->
+  <section id="Sheldon" class="projects-section bg-white">
+    <div class="container">
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
           <div class="featured-text text-center text-lg-center">
             <h1> Was Sheldon Cooper right?</h1>
@@ -103,17 +265,16 @@
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="featured-text text-center text-lg-left">
           <h4> Sheldon says: </h4>      
+          <p>
+              – Statistically always punching on fourth down makes no sense. When the Aggies give up 
+              the ball on their own 5-yard line the opposing team has a 92% chance of scoring when they 
+              put deep from their own territory the other team still has a 77% chance of scoring but since 
+              they convert on fourth down 50% of the time the math says they should never punch again
+          </p>  
+
+          <p style="margin-top:1cm;"></p>
+
           <p class="text-black-50 mb-0">
-            <span class="clhl">
-              – Statistically always punching on fourth down makes no sense. When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring when they put deep from their own territory the other team still has a 77% chance of scoring but since they convert on fourth down 50% of the time the math says they should never punch again
-                                          We can decompose it into the following statements:
-                                          When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring
-                                          When they put deep from their own territory the other team still has a 77% chance of scoring
-                                          They convert on fourth down 50% of the time
-                                          Math says they should never punch again
-            </span>
-            
-            <p style="margin-top:1cm;"></p>
             <h4> We can decompose it into the following statements: </h4>  
             <ul>
               <li>When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring</li>
@@ -121,7 +282,9 @@
               <li>They convert on fourth down 50% of the time</li>
               <li>Math says they should never punch again</li>
             </ul>
-
+          </p>
+          
+          <p class="text-black-50 mb-0">
             <p style="margin-top:1cm;">
               <h4> 
                 Honestly speaking we know that Sheldon was right, and there are a lot of statistics proving that.
@@ -165,9 +328,12 @@
         </div>
       </div>
 
-      <div class="featured-text text-center text-lg-center">
-        <h1>Team does a touchdown with <span class="Count">2.8570</span>% chance</h1>
-     
+      <div class="featured-text text-center text-lg-center numbers">
+        <div class="number-item">
+          <h1>Team does a touchdown with 
+            2.<span class='value'>8570</span>
+            % chance </h1>
+        </div>
       </div>
 
       <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
@@ -203,14 +369,17 @@
       </div>
 
     <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-      <div class="featured-text text-center text-lg-center">
+      <div class="featured-text text-center text-lg-center numbers">
         <h2> Statement 3</h2>
         <p class="text-black-50 mb-0"> 
           Here we want to investigate how probable it is to gain next 4 downs by making 10 yards in 4 downs.
           For that we will compare number of made yards with the distance needed for achieving the goal. 
         </p>
-    
-        <h3>On each down a team has <span class="Count">21.1471</span>% chance to get next 4 downs</h3>
+      </div>
+      <div class="featured-text text-center text-lg-center numbers">
+        <div class="number-item">
+          <h3>On each down a team has 21.<span class="value">1471</span>% chance to get next 4 downs</h3>
+        </div>
       </div>
     </div>
 
@@ -256,7 +425,12 @@
       <div class="featured-text text-center text-lg-center">
         <h2> Conslusion for Sheldon? </h2>
 
-        <h3> In average after handoff a team does <span class="Count"> 4.2123 </span> yards </p>
+        <div class="featured-text text-center text-lg-center numbers">
+          <div class="number-item">
+            <h3> In average after handoff a team does 4.<span class="value">2123 </span> yards </p>
+          </div>
+        </div>
+        
         <h3> Having these results we would advise coaches to rush when the distance for gaining additional d
               owns is less than 2.5 yards. </h3>  
       </div>
@@ -264,8 +438,65 @@
 
   </section>
 
+  <hr style="border: 5px solid black;"> 
+
+  <section id="tactics" class="projects-section bg-white">
+    <div class="container">
+    
+      <!-- First insights -->
+      <div class="featured-text text-center text-lg-center">
+        <h1> Final insights </h1>
+        <p class="text-black-50 mb-0">
+          Strategy forms a major part of the game of American football, and both teams plan many aspects of their 
+          plays (offense) and response to plays (defense), such as what formations they take, who they put on the 
+          field, and the roles and instructions each player are given. Throughout a game, each team adapts to the other's
+          apparent strengths and weaknesses, trying various approaches to outmaneuver or overpower their opponent to score 
+          more points in order to win the game.
+        </p>
+      </div>
+   
+      <!-- Map -->
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/tactics1.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5 order-lg-first">
+          <div class="featured-text text-center text-lg-left">
+            <h2>Tactics 1 </h2>
+            <p class="text-black-50 mb-0">
+              Sample text
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/tactics2.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h2>Tactics 2 </h2>
+            <p class="text-black-50 mb-0">
+              Sample text
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/tactics3.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5 order-lg-first">
+          <div class="featured-text text-center text-lg-left">
+            <h2>Tactics 3 </h2>
+            <p class="text-black-50 mb-0">
+              Sample text
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- About Section -->
-  <section id="signup" class="about-section text-center">
+  <section id="signup" class="signup-section text-center">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -304,16 +535,35 @@
 <script src="js/grayscale.min.js"></script>
 
 <script>
-  $('.Count').each(function () {
-    var $this = $(this);
-    jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
-      duration: 6000,
-      easing: 'swing',
-      step: function () {
-        $this.text(this.Counter.toFixed(4));
-      }
-    });
-  });
+  $(window).scroll(testScroll);
+  var viewed = false;
+
+  function isScrolledIntoView(elem) {
+      var docViewTop = $(window).scrollTop();
+      var docViewBottom = docViewTop + $(window).height();
+
+      var elemTop = $(elem).offset().top;
+      var elemBottom = elemTop + $(elem).height();
+
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+
+  function testScroll() {
+    if (isScrolledIntoView($(".numbers")) && !viewed) {
+        viewed = true;
+        $('.value').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+      });
+    }
+  }
 </script>
 </body>
 
