@@ -74,12 +74,13 @@
           <h2 class="text-white mb-4">Abstract</h2>
           <p class="text-white-50"> 
             Sport data always contains a lot of very interesting insights. 
+            We narrate a story about statistics in American Football.
             Having been inspired by Sheldon Cooper we decided to find out what helps professional sport players win. 
-            American football is a complex sport and defintely contains many secrets to discover for data scientists. 
-            Deeper insight about what is important and what is not will help teams, media, and fans better understand the game, and for coaches to find better strategies.
-
             As good data scientists we are going to start discovering the data with nice visualizations. 
-            Looking at players positions, understanding coach strategies and team statistics will hopefully give us surprising ideas.
+            Looking at players positions, understanding coach strategies and team statistics give us some interesting ideas.
+            So, grab a popcorn and enjoy the story! 
+            By the way, a lot of our graphs are interactive, do not forget about that during 
+            you reading and you will get even more insights!
          </p>
 
         </div>
@@ -128,7 +129,7 @@
       
         <div class="col-lg">
           <div class="featured-text text-center text-lg-left">
-            <h2>Data description</h2>
+            <h2>So big data</h2>
             <p class="text-black-50 mb-0">
               Being one of the most intricate sports in the world makes american football also 
               one of the most interesting to explore. This sport game is made up of several key moments one 
@@ -174,34 +175,32 @@
    
       <!-- Map -->
       <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
-        <iframe src="img/charts/maps.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-sm">
+          <iframe src="img/charts/maps.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        </div>
         <div class="col-xl-4 col-lg-5 order-lg-first">
           <div class="featured-text text-center text-lg-left">
-            <h2>Where?</h2>
+            <h2>Where are you from?</h2>
             <p class="text-black-50 mb-0">
               Let’s plot the number of games played in the state on the US map. 
               Let’s also plot the popularity of each state for professional players studying. 
               As you can see, there are huge differences in these maps. 
               The most games are played in California, while most players studied in Texas. 
               There are no games in the middle of the US, but some players studied there.
+              From the previous plots, we learned that the distributions of games and players’ colleges differ significantly. 
+              It means that players often move to another state to join the professional team. 
             </p>
           </div>
         </div>
       </div>
 
-      <div class="featured-text text-center text-lg-center">
-        <p class="text-black-50 mb-0">
-           From the previous plots, we learned that the distributions of games and players’ colleges differ significantly. 
-           It means that players often move to another state to join the professional team. 
-        </p>
-      </div>
 
       <!-- Transitions -->
       <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
         <iframe src="img/charts/transitions.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h2>Where is everyone going?</h2>
+            <h2>Where are you going?</h2>
             <p class="text-black-50 mb-0">
              
               Let’s plot the most popular directions for a future career from each state (you can select an analyzed state). 
@@ -219,7 +218,7 @@
         <iframe src="img/charts/players_weights_box_plot.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
         <div class="col-xl-4 col-lg-5 order-lg-first">
           <div class="featured-text text-center text-lg-left">
-            <h2>Who is who?</h2>
+            <h2>Who are you?</h2>
             <p class="text-black-50 mb-0">
               Looking at players' weight distribution depending on the positions they play, 
               one can observe three 3 different groups. The first group ('heavy-weight' marked with red colour) 
@@ -265,18 +264,16 @@
 
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="featured-text text-center text-lg-left">
-          <h4> Sheldon says: </h4>      
-          <p>
+          <h4> Sheldon says: </h4>
+          <p class="text-black-50 mb-0">
               – Statistically always punching on fourth down makes no sense. When the Aggies give up 
               the ball on their own 5-yard line the opposing team has a 92% chance of scoring when they 
               put deep from their own territory the other team still has a 77% chance of scoring but since 
               they convert on fourth down 50% of the time the math says they should never punch again
-          </p>  
+          </p>
 
-          <p style="margin-top:1cm;"></p>
-
-          <p class="text-black-50 mb-0">
-            <h4> We can decompose it into the following statements: </h4>  
+          <p class="text-black-50 mb-0" style="margin-top:1cm;"> 
+            <h4> We can decompose it into the following statements: </h4> 
             <ul>
               <li>When the Aggies give up the ball on their own 5-yard line the opposing team has a 92% chance of scoring</li>
               <li>When they put deep from their own territory the other team still has a 77% chance of scoring</li>
@@ -284,9 +281,8 @@
               <li>Math says they should never punch again</li>
             </ul>
           </p>
-          
-          <p class="text-black-50 mb-0">
-            <p style="margin-top:1cm;">
+
+          <p class="text-black-50 mb-0" style="margin-top:1cm;">
               <h4> 
                 Honestly speaking we know that Sheldon was right, and there are a lot of statistics proving that.
                 For example take a look into 
@@ -294,7 +290,6 @@
               </h4>   
               As in our dataset we have an information only about hadoffs and nothing about punching we couldn't check exactly these facts, 
               but that stetements inspired us with some interesting things to check.
-            </p>
           </p>
         </div>
       </div>
@@ -375,14 +370,13 @@
         <p class="text-black-50 mb-0"> 
           Here we want to investigate how probable it is to gain next 4 downs by making 10 yards in 4 downs.
           For that we will compare number of made yards with the distance needed for achieving the goal. 
+          <div class="number-item" style="margin-top:1cm;">
+            <h3>On each down a team has 21.<span class="value">1471</span>% chance to get next 4 downs!</h3>
+          </div>
         </p>
       </div>
-      <div class="featured-text text-center text-lg-center numbers">
-        <div class="number-item">
-          <h3>On each down a team has 21.<span class="value">1471</span>% chance to get next 4 downs</h3>
-        </div>
-      </div>
     </div>
+   
 
     <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <iframe src="img/charts/GoalProba.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
@@ -424,16 +418,15 @@
 
     <div class="row align-items-center no-gutters mb-4 mb-lg-5">
       <div class="featured-text text-center text-lg-center">
-        <h2> Conslusion for Sheldon? </h2>
-
         <div class="featured-text text-center text-lg-center numbers">
           <div class="number-item">
-            <h3> In average after handoff a team does 4.<span class="value">2123 </span> yards </p>
+            <h3> Having these results we would advise teams to rush when the distance 
+                 for gaining additional downs is less than 2 yards. </h3>  
+
           </div>
         </div>
         
-        <h3> Having these results we would advise coaches to rush when the distance for gaining additional d
-              owns is less than 2.5 yards. </h3>  
+        
       </div>
     </div>
 
@@ -447,11 +440,14 @@
       <div class="featured-text text-center text-lg-center">
         <h1> Final insights </h1>
         <p class="text-black-50 mb-0">
-          Strategy forms a major part of the game of American football, and both teams plan many aspects of their 
-          plays (offense) and response to plays (defense), such as what formations they take, who they put on the 
-          field, and the roles and instructions each player are given. Throughout a game, each team adapts to the other's
-          apparent strengths and weaknesses, trying various approaches to outmaneuver or overpower their opponent to score 
-          more points in order to win the game.
+          Strategy forms a major part of the game of American football, and both teams plan many aspects 
+          of their plays (offense) and response to plays (defense), such as what formations they take, who 
+          they put on the field, and the roles and instructions each player are given. Throughout a game, each 
+          team adapts to the other's apparent strengths and weaknesses, trying various approaches to outmaneuver 
+          or overpower their opponent to score more points in order to win the game.
+        </p>
+        <p class="text-black-50 mb-0" style="margin-top:0.5cm;">
+          Since our data is about hand-offs, let’s take a look at formations which are usually used in such games. 
         </p>
       </div>
    
@@ -460,9 +456,11 @@
         <iframe src="img/charts/tactics1.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
         <div class="col-xl-4 col-lg-5 order-lg-first">
           <div class="featured-text text-center text-lg-left">
-            <h2>Tactics 1 </h2>
+            <h2> Most popular Formations </h2>
             <p class="text-black-50 mb-0">
-              Sample text
+              We can separate the three most popular formations which are used 
+              in almost 95% of the games: SINGLEBACK, SHOTGUN and I_FORM. 
+              Their corresponding schemes are shown below.
             </p>
           </div>
         </div>
@@ -489,13 +487,29 @@
         </div>
       </div>
 
+      <div class="featured-text text-center text-lg-center">
+        <p class="text-black-50 mb-0">
+          In american football, we can point out two areas of field as special ones. 
+          These are the areas close to team’s end zones and have a width of 20 yards. 
+          High probability of touch down in these zones makes coaches to change their tactic. 
+          Therefore, it makes sense to compute what tactics were mostly used per zone of field. 
+          For that we will divide field on five 20-yards long zones and for each calculate number of 
+          times when each formation was used. The plot shown below illustrates computed statistics in 
+          terms of distance from offensive team’s endzone.
+      </div>
+
       <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
         <iframe src="img/charts/tactics2.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h2>Tactics 2 </h2>
+            <h2> When these tactics are used? </h2>
             <p class="text-black-50 mb-0">
-              Sample text
+              What we observe is that hand-off technique is usually used in the zone of 20-40 yards from own end zone. 
+              With increase of distance from that zone, the number of times when hand-off was used gradually decreases. 
+              Another interesting aspect is that coaches not only prefer SINGLEBACK formation in general but they do it for 
+              for each zone.
+              But, is SINGLEBACK the best offensive formation for all cases? 
+              To investigate that, let’s compute average number of yards gained for each formation.
             </p>
           </div>
         </div>
@@ -505,7 +519,24 @@
         <iframe src="img/charts/tactics3.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
         <div class="col-xl-4 col-lg-5 order-lg-first">
           <div class="featured-text text-center text-lg-left">
-            <h2>Tactics 3 </h2>
+            <h2> When they really have to be used ? </h2>
+            <p class="text-black-50 mb-0">
+              Plot reveals dramatic drop of efficiency when offence team is close to the opponent's end zone. 
+              Statistically, the best zone to use hand-off is 20-40 yards from own end zone, which coincides 
+              with coaches’ approach. But the thing which coaches might do wrong is favouring 
+              SINGLEBACK formation over SHOTGUN since the former has significantly lower value 
+              of average yards gained for each zone. Things get even more interesting when we 
+              consider the closest to opponent's end zone area. In this case, the best tactic to use is I_FORM.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
+        <iframe src="img/charts/feature_importances.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h2>Feature Importance</h2>
             <p class="text-black-50 mb-0">
               Sample text
             </p>
@@ -523,12 +554,13 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-white mb-4">Conclusion</h2>
           <p class="text-white-50"> 
-            To be done:
+            The main insights we studied:
             <ul class="text-white-50 text-lg-left">
-              <li><span class="focus">Investigate some strange observations: 1) outlier in the number of handoff on 25 yard line 2) some of the defense positions make yards in offense</li>
-              <li><span class="focus">Investigate features with non-usual histograms like Speed and Dir</li>
-              <li><span class="focus">Create PlayId-based dataset from our data (since we want to predict result of run for each play, not for each player in play)</li>
-              <li><span class="focus">Train few different models (linear, gradient boosted trees, random forest, maybe some others) on obtained dataset to predict gained Yards</li>
+              <li><span class="focus">The most efficient zone for hand-offs in terms of number of yards gained is 20-40 yards from own end zone. </li>
+              <li><span class="focus">SHOTGUN is the best strategy to use for each zone except the last, namely 80-100, where I-Form is the best one
+.</li>
+              <li><span class="focus"></li>
+              <li><span class="focus"></li>
             </ul>
           </p>
         </div>
