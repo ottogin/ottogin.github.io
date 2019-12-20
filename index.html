@@ -112,10 +112,10 @@
             <p></p>
             <p> 
               For better and more detailed explanations of the rules we advise you to read 
-              <a href="https://www.liveabout.com/football-101-the-basics-of-football-1333784">this article </a>.
-              and watch <a href="https://www.youtube.com/watch?v=Ddwp1HyEFRE"> this video </a>.
+              <a href="https://www.liveabout.com/football-101-the-basics-of-football-1333784">this article </a>
+              and watch <a href="https://www.youtube.com/watch?v=Ddwp1HyEFRE"> this video</a>.
               If you are already into the game, you can find full games on 
-              <a href="https://www.youtube.com/channel/UCP4Wts8iiR9-Ddfq7FK0x3g/videos"> this channel </a>.
+              <a href="https://www.youtube.com/channel/UCP4Wts8iiR9-Ddfq7FK0x3g/videos"> this channel</a>.
 
             </p> 
             <a href="https://www.nfl.com">
@@ -459,7 +459,7 @@
             <h2> Most popular Formations </h2>
             <p class="text-black-50 mb-0">
               We can separate the three most popular formations which are used 
-              in almost 95% of the games: SINGLEBACK, SHOTGUN and I_FORM. 
+              in <span class="clhl"> almost 95% of the games </span>: SINGLEBACK, SHOTGUN and I_FORM. 
               Their corresponding schemes are shown below.
             </p>
           </div>
@@ -469,14 +469,14 @@
       <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
         <div class="col-xl">
           <div class="featured-text text-center text-lg-center">
-            <h3> Shotgun</h3> 
-            <img src="img/ShotgunFormation.png" alt="Italian Trulli" style="width:300px;">
+            <h3> Singleback</h3> 
+            <img src="img/SinglebackFormation.png" alt="Italian Trulli" style="width:300px;">
           </div>
         </div>
         <div class="col-xl">
           <div class="featured-text text-center text-lg-center">
-            <h3> Singleback</h3> 
-            <img src="img/SinglebackFormation.png" alt="Italian Trulli" style="width:300px;">
+            <h3> Shotgun</h3> 
+            <img src="img/ShotgunFormation.png" alt="Italian Trulli" style="width:300px;">
           </div>
         </div>
         <div class="col-xl">
@@ -504,7 +504,7 @@
           <div class="featured-text text-center text-lg-left">
             <h2> When these tactics are used? </h2>
             <p class="text-black-50 mb-0">
-              What we observe is that hand-off technique is usually used in the zone of 20-40 yards from own end zone. 
+              What we observe is that <span class="clhl">hand-off technique is usually used in the zone of 20-40 yards from own end zone</span>. 
               With increase of distance from that zone, the number of times when hand-off was used gradually decreases. 
               Another interesting aspect is that coaches not only prefer SINGLEBACK formation in general but they do it for 
               for each zone.
@@ -522,7 +522,7 @@
             <h2> When they really have to be used ? </h2>
             <p class="text-black-50 mb-0">
               Plot reveals dramatic drop of efficiency when offence team is close to the opponent's end zone. 
-              Statistically, the best zone to use hand-off is 20-40 yards from own end zone, which coincides 
+              Statistically, <span class="clhl"> hand-off allow to gain the highest number of yards in the 20-40 yards zone </span>, which coincides 
               with coaches’ approach. But the thing which coaches might do wrong is favouring 
               SINGLEBACK formation over SHOTGUN since the former has significantly lower value 
               of average yards gained for each zone. Things get even more interesting when we 
@@ -532,13 +532,35 @@
         </div>
       </div>
 
+      <div class="featured-text text-center text-lg-center">
+        <p class="text-black-50 mb-0">
+          We investigated this dataset from the humans’ point of view. 
+          But what machines think about that? To understand that, we trained a gradient boosting 
+          model using LightGBM library on the original task from the Kaggle competition: prediction of gained Yards. 
+          Then we extracted feature importances from it. Feature importances are calculated using information about 
+          how the loss has changed with new splits on the specific feature. Our model has 2.79 MAE (Mean Absolute Error),
+           while constant prediction can give at most 3.67 MAE, so our model is clever enough and we can trust it ;)
+      </div>
+
+      <hr style="border: 1px solid black;"> 
+
       <div class="row align-items-center no-gutters  mb-4 mb-lg-5">
         <iframe src="img/charts/feature_importances.html" height=600 width=700 frameborder="0" scrolling="no"> </iframe>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
             <h2>Feature Importance</h2>
             <p class="text-black-50 mb-0">
-              Sample text
+              You can see the biggest feature performances on the plot. 
+              The most important features are those which are connected with the current 
+              position on the field: Distance, Distance to TouchDown, YardLine etc. 
+              It’s meaningful, because, for example, near opponent end zone it’s impossible 
+              to do a lot of yards. Also important is, for example, DefendersInTheBox, which 
+              represents the number of defenders in the frontline.
+             </p>
+
+             <p class="text-black-50 mb-0">
+              P.S. Don’t be confused with features like S12, the number stands for the concrete player,
+              S means speed, A means acceleration etc.
             </p>
           </div>
         </div>
@@ -556,11 +578,13 @@
           <p class="text-white-50"> 
             The main insights we studied:
             <ul class="text-white-50 text-lg-left">
+              <li><span class="focus">American Football is extremely interesting for watching at the night before a deadline.</li>
+              <li><span class="focus">Texas gives the largest number of NFL players.</li>
+              <li><span class="focus">Each of the player roles requires a specific set of skills and physical parameters.</li>
+              <li><span class="focus">Sheldon was right!</li>
               <li><span class="focus">The most efficient zone for hand-offs in terms of number of yards gained is 20-40 yards from own end zone. </li>
-              <li><span class="focus">SHOTGUN is the best strategy to use for each zone except the last, namely 80-100, where I-Form is the best one
-.</li>
-              <li><span class="focus"></li>
-              <li><span class="focus"></li>
+              <li><span class="focus">SHOTGUN is the best strategy to use for each zone except the last, namely 80-100, where I-Form is the best one.</li>
+              <li><span class="focus">We investigated that for prediction of gained yards the most important features are related to the position on the field.</li>
             </ul>
           </p>
         </div>
